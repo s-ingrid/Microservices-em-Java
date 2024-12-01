@@ -38,10 +38,10 @@ Manages email sending functionalities.
 ### Installation
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/microservices-project.git
    cd microservices-project
-   \`\`\`
+   ```
 
 2. **Set up RabbitMQ:**
    - Sign up for a free account at [CloudAMQP](https://www.cloudamqp.com/)
@@ -55,7 +55,7 @@ Manages email sending functionalities.
 ### Configuration
 
 #### User Microservice (\`user-microservice/src/main/resources/application.properties\`):
-\`\`\`properties
+```properties
 # Database Configuration
 spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
 spring.datasource.username=yourusername
@@ -65,10 +65,10 @@ spring.datasource.password=yourpassword
 spring.rabbitmq.host=your-cloudamqp-url
 spring.rabbitmq.username=your-username
 spring.rabbitmq.password=your-password
-\`\`\`
+```
 
 #### Email Microservice (\`email-microservice/src/main/resources/application.properties\`):
-\`\`\`properties
+```properties
 # Database Configuration
 spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
 spring.datasource.username=yourusername
@@ -86,26 +86,26 @@ spring.mail.username=your-email@gmail.com
 spring.mail.password=your-email-password
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
-\`\`\`
+```
 
 ### Running the Services
 
 1. **Build the project with Maven:**
-   \`\`\`bash
+   ```bash
    mvn clean install
-   \`\`\`
+   ```
 
 2. **Run User Microservice:**
-   \`\`\`bash
+   ```bash
    cd user-microservice
    mvn spring-boot:run
-   \`\`\`
+   ```
 
 3. **Run Email Microservice:**
-   \`\`\`bash
+   ```bash
    cd email-microservice
    mvn spring-boot:run
-   \`\`\`
+   ```
 
 ## Future Work
 - Implement complete CRUD for a RESTful API
