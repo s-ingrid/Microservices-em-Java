@@ -70,7 +70,7 @@ spring.rabbitmq.password=your-password
 #### Email Microservice (\`email-microservice/src/main/resources/application.properties\`):
 ```properties
 # Database Configuration
-spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
+spring.datasource.url=jdbc:postgresql://localhost:5432/emaildb
 spring.datasource.username=yourusername
 spring.datasource.password=yourpassword
 
